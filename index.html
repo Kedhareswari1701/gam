@@ -1,91 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Gaming Website</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
+
 </head>
+
 <body class="bg-black text-white font-sans overflow-x-hidden">
 
-  <!-- Navbar -->
+  <!-- ================= NAVBAR ================= -->
+
   <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md border-b border-gray-800 z-50">
+
+    <!-- Hidden Checkbox -->
+
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+    <!-- Navbar Container -->
+
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+
       <h1 class="text-3xl font-extrabold text-cyan-400 tracking-widest">
         GAMEZONE
       </h1>
 
+      <!-- Hamburger Menu -->
+
+      <label for="menu-toggle" class="md:hidden cursor-pointer relative z-50">
+
+        <div class="space-y-1">
+
+          <span class="block w-8 h-1 bg-cyan-400 rounded"></span>
+
+          <span class="block w-8 h-1 bg-cyan-400 rounded"></span>
+
+          <span class="block w-8 h-1 bg-cyan-400 rounded"></span>
+
+        </div>
+
+      </label>
+
+      <!-- Desktop Navbar -->
+
       <nav class="hidden md:flex gap-8 text-lg font-medium">
-        <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-        <a href="#games" class="hover:text-cyan-400 transition">Games</a>
-        <a href="#tournaments" class="hover:text-cyan-400 transition">Tournaments</a>
-        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+
+        <a href="#home" class="hover:text-cyan-400 transition">
+          Home
+        </a>
+
+        <a href="#games" class="hover:text-cyan-400 transition">
+          Games
+        </a>
+
+        <a href="#tournaments" class="hover:text-cyan-400 transition">
+          Tournaments
+        </a>
+
+        <a href="#contact" class="hover:text-cyan-400 transition">
+          Contact
+        </a>
+
       </nav>
 
-      <!-- <button class="bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-2 rounded-full font-bold transition">
-        Play Now
-      </button> -->
     </div>
+
+    <!-- Mobile Navbar -->
+
+    <nav class="hidden peer-checked:block md:hidden bg-black border-t border-gray-800 text-lg font-medium">
+
+      <a
+        href="#home"
+        class="block text-center py-4 border-b border-gray-800 hover:text-cyan-400 transition"
+      >
+        Home
+      </a>
+
+      <a
+        href="#games"
+        class="block text-center py-4 border-b border-gray-800 hover:text-cyan-400 transition"
+      >
+        Games
+      </a>
+
+      <a
+        href="#tournaments"
+        class="block text-center py-4 border-b border-gray-800 hover:text-cyan-400 transition"
+      >
+        Tournaments
+      </a>
+
+      <a
+        href="#contact"
+        class="block text-center py-4 hover:text-cyan-400 transition"
+      >
+        Contact
+      </a>
+
+    </nav>
+
   </header>
 
-  <!-- Hero Section -->
+  <!-- ================= HERO SECTION ================= -->
+
   <section
     id="home"
     class="relative h-screen bg-cover bg-center flex items-center"
     style="background-image: url('https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=1600&q=80');"
   >
+
     <div class="absolute inset-0 bg-black/70"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6">
+
       <div class="max-w-2xl">
+
         <p class="uppercase tracking-[6px] text-cyan-400 mb-4 font-semibold">
           Future Of Gaming
         </p>
 
-        <h2 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6">
+        <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+
           Enter The
-          <span class="text-cyan-400"> Battle Arena</span>
+          <span class="text-cyan-400">
+            Battle Arena
+          </span>
+
         </h2>
 
         <p class="text-lg text-gray-300 leading-8 mb-8">
+
           Experience next-level graphics, multiplayer action, and immersive gameplay.
+
         </p>
 
         <div class="flex flex-wrap gap-4">
-          <button class="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg transition">
-            Explore Games
-          </button>
 
-          <button class="border border-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition">
+          <a
+            href="#games"
+            class="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg transition"
+          >
+
+            Explore Games
+
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=QdBZY2fkU-0"
+            target="_blank"
+            class="border border-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition"
+          >
+
             Watch Trailer
-          </button>
+
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- ================= GAMES SECTION ================= -->
 
-  <!-- Games Section -->
   <section id="games" class="py-24 px-6 bg-gray-950">
+
     <div class="max-w-7xl mx-auto">
+
       <div class="text-center mb-16">
+
         <p class="uppercase tracking-[4px] text-cyan-400 font-semibold mb-3">
           Featured Games
         </p>
 
-        <!-- <h3 class="text-5xl font-extrabold mb-4">
-          Trending Collection
-        </h3> -->
-
         <p class="text-gray-400 max-w-2xl mx-auto leading-8">
           Discover the latest action, racing, and adventure games loved by millions.
         </p>
+
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Card 1 -->
+
         <div class="bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
           <img
             src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80"
             class="h-72 w-full object-cover"
@@ -93,6 +210,7 @@
           />
 
           <div class="p-6">
+
             <p class="text-cyan-400 uppercase text-sm tracking-[3px] mb-2">
               FPS Action
             </p>
@@ -104,11 +222,15 @@
             <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-xl font-bold transition">
               Play Now
             </button>
+
           </div>
+
         </div>
 
         <!-- Card 2 -->
+
         <div class="bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
           <img
             src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80"
             class="h-72 w-full object-cover"
@@ -116,6 +238,7 @@
           />
 
           <div class="p-6">
+
             <p class="text-cyan-400 uppercase text-sm tracking-[3px] mb-2">
               Racing
             </p>
@@ -127,11 +250,15 @@
             <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-xl font-bold transition">
               Play Now
             </button>
+
           </div>
+
         </div>
 
         <!-- Card 3 -->
+
         <div class="bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
           <img
             src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
             class="h-72 w-full object-cover"
@@ -139,6 +266,7 @@
           />
 
           <div class="p-6">
+
             <p class="text-cyan-400 uppercase text-sm tracking-[3px] mb-2">
               Adventure RPG
             </p>
@@ -150,23 +278,29 @@
             <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-xl font-bold transition">
               Play Now
             </button>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+  <!-- ================= TOURNAMENT SECTION ================= -->
 
-  
   <section
     id="tournaments"
     class="relative py-24 px-6 bg-cover bg-center"
     style="background-image: url('https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1600&q=80');"
   >
+
     <div class="absolute inset-0 bg-black/80"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto text-center">
+
       <p class="uppercase tracking-[4px] text-cyan-400 font-semibold mb-3">
         Global Competition
       </p>
@@ -175,73 +309,82 @@
         Join Gaming Tournaments
       </h3>
 
-      <!-- <p class="text-gray-300 text-lg leading-8 mb-10 max-w-3xl mx-auto">
-        Compete with the best gamers worldwide and win exciting rewards every week.
-      </p> -->
-
       <button class="bg-cyan-500 hover:bg-cyan-400 text-black px-10 py-4 rounded-full font-bold text-lg transition">
         Register Now
       </button>
+
     </div>
+
   </section>
 
-  <!-- Stats -->
+  <!-- ================= STATS ================= -->
+
   <section class="py-20 px-6 bg-black">
+
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 
       <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
-        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">10M+</h4>
-        <p class="text-gray-400">Players</p>
+
+        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">
+          10M+
+        </h4>
+
+        <p class="text-gray-400">
+          Players
+        </p>
+
       </div>
 
       <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
-        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">120+</h4>
-        <p class="text-gray-400">Games</p>
+
+        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">
+          120+
+        </h4>
+
+        <p class="text-gray-400">
+          Games
+        </p>
+
       </div>
 
       <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
-        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">500+</h4>
-        <p class="text-gray-400">Tournaments</p>
+
+        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">
+          500+
+        </h4>
+
+        <p class="text-gray-400">
+          Tournaments
+        </p>
+
       </div>
 
       <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
-        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">24/7</h4>
-        <p class="text-gray-400">Support</p>
+
+        <h4 class="text-5xl font-extrabold text-cyan-400 mb-3">
+          24/7
+        </h4>
+
+        <p class="text-gray-400">
+          Support
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
-
-
-
-  
-
+  <!-- ================= CONTACT ================= -->
 
   <section id="contact" class="py-24 px-6 bg-gray-950">
+
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-      <div>
-        <p class="uppercase tracking-[4px] text-cyan-400 font-semibold mb-3">
-          Contact Us
-        </p>
-
-        <h3 class="text-5xl font-extrabold mb-6 leading-tight">
-          Ready To Play?
-        </h3>
-
-        <p class="text-gray-400 text-lg leading-8 mb-6">
-          Join the GAMEZONE community and explore the best gaming experiences online.
-        </p>
-
-        <div class="space-y-3 text-lg text-gray-300">
-          <p>📍 Gaming Street, Cyber City</p>
-          <p>📞 +1 800 GAMEZONE</p>
-          <p>✉️ support@gamezone.gg</p>
-        </div>
-      </div>
+      <!-- Contact Form -->
 
       <form class="bg-black border border-gray-800 rounded-3xl p-8 space-y-5 shadow-2xl">
+
         <input
           type="text"
           placeholder="Your Name"
@@ -257,25 +400,56 @@
         <textarea
           rows="5"
           placeholder="Your Message"
-          class="w-full bg-gray-900 border border-gray-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-        ></textarea>
+          class="w-full bg-gray-900 border border-gray-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
 
         <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-4 rounded-xl font-bold text-lg transition">
           Send Message
         </button>
+
       </form>
 
+      <!-- Contact Info -->
+
+      <div>
+
+        <p class="uppercase tracking-[4px] text-cyan-400 font-semibold mb-3">
+          Contact Us
+        </p>
+
+        <h3 class="text-5xl font-extrabold mb-6 leading-tight">
+          Ready To Play?
+        </h3>
+
+        <p class="text-gray-400 text-lg leading-8 mb-6">
+          Join the GAMEZONE community and explore the best gaming experiences online.
+        </p>
+
+        <div class="space-y-3 text-lg text-gray-300">
+
+          <p>📍 Gaming Street, Cyber City</p>
+
+          <p>📞 +1 800 GAMEZONE</p>
+
+          <p>✉️ support@gamezone.gg</p>
+
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
-  
+  <!-- ================= FOOTER ================= -->
+
   <footer class="border-t border-gray-800 bg-black py-8 text-center text-gray-500">
-    <p>© 2026 GAMEZONE. All Rights Reserved.</p>
+
+    <p>
+      © 2026 GAMEZONE. All Rights Reserved.
+    </p>
+
   </footer>
 
-
-  
-
-
 </body>
+
 </html>
